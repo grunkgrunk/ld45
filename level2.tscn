@@ -6,101 +6,294 @@
 
 [node name="base_world" index="0" instance=ExtResource( 1 )]
 
-[node name="map" parent="." index="0"]
-tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, -65519, 0, 0, -65518, 0, 0, -65517, 0, 0, -65516, 0, 0, -65515, 0, 0, -65514, 0, 0, -65513, 0, 0, -65512, 0, 0, -65511, 0, 0, -65510, 0, 0, -65509, 0, 0, -65508, 0, 0, -65507, 0, 0, -65506, 0, 0, -65505, 0, 0, -65504, 0, 0, 65535, 0, 0, 2, 0, 0, 6, 0, 0, 31, 0, 0, 32, 0, 0, 131071, 0, 0, 65538, 0, 0, 65542, 0, 0, 65567, 0, 0, 65568, 0, 0, 196607, 0, 0, 131103, 0, 0, 131104, 0, 0, 262143, 0, 0, 196639, 0, 0, 196640, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 0, 0, 262162, 0, 0, 262163, 0, 0, 262164, 0, 0, 262165, 0, 0, 262166, 0, 0, 262167, 0, 0, 262168, 0, 0, 262169, 0, 0, 262170, 0, 0, 262175, 0, 0, 262176, 0, 0, 393215, 0, 0, 327690, 0, 0, 327691, 0, 0, 327706, 0, 0, 327711, 0, 0, 327712, 0, 0, 458751, 0, 0, 393242, 0, 0, 393247, 0, 0, 393248, 0, 0, 524287, 0, 0, 458778, 0, 0, 458783, 0, 0, 458784, 0, 0, 589823, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 0, 0, 524308, 0, 0, 524309, 0, 0, 524310, 0, 0, 524314, 0, 0, 524319, 0, 0, 524320, 0, 0, 655359, 0, 0, 589827, 0, 0, 589850, 0, 0, 589855, 0, 0, 589856, 0, 0, 720895, 0, 0, 655363, 0, 0, 655386, 0, 0, 655391, 0, 0, 655392, 0, 0, 786431, 0, 0, 720899, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 0, 720906, 0, 0, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 0, 720914, 0, 0, 720915, 0, 0, 720916, 0, 0, 720917, 0, 0, 720918, 0, 0, 720919, 0, 0, 720920, 0, 0, 720921, 0, 0, 720922, 0, 0, 720923, 0, 0, 720924, 0, 0, 720926, 0, 0, 720927, 0, 0, 720928, 0, 0, 851967, 0, 0, 786435, 0, 0, 786464, 0, 0, 917503, 0, 0, 851971, 0, 0, 851996, 0, 0, 851998, 0, 0, 851999, 0, 0, 852000, 0, 0, 983039, 0, 0, 917507, 0, 0, 917508, 0, 0, 917509, 0, 0, 917510, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917522, 0, 0, 917523, 0, 0, 917524, 0, 0, 917525, 0, 0, 917526, 0, 0, 917527, 0, 0, 917528, 0, 0, 917529, 0, 0, 917530, 0, 0, 917531, 0, 0, 917532, 0, 0, 917534, 0, 0, 917535, 0, 0, 917536, 0, 0, 1048575, 0, 0, 983071, 0, 0, 983072, 0, 0, 1114111, 0, 0, 1048607, 0, 0, 1048608, 0, 0, 1179647, 0, 0, 1114143, 0, 0, 1114144, 0, 0, 1245183, 0, 0, 1179679, 0, 0, 1179680, 0, 0, 1310719, 0, 0, 1245184, 0, 0, 1245185, 0, 0, 1245186, 0, 0, 1245187, 0, 0, 1245188, 0, 0, 1245189, 0, 0, 1245190, 0, 0, 1245191, 0, 0, 1245192, 0, 0, 1245193, 0, 0, 1245194, 0, 0, 1245195, 0, 0, 1245196, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1245205, 0, 0, 1245206, 0, 0, 1245207, 0, 0, 1245208, 0, 0, 1245209, 0, 0, 1245210, 0, 0, 1245211, 0, 0, 1245212, 0, 0, 1245213, 0, 0, 1245214, 0, 0, 1245215, 0, 0, 1245216, 0, 0 )
+[node name="no_control_area3" parent="." index="0" instance=ExtResource( 2 )]
+position = Vector2( 1568, 512 )
+scale = Vector2( 6, 4 )
 
-[node name="no_control_area" parent="." index="3" instance=ExtResource( 2 )]
+[node name="no_control_area2" parent="." index="1" instance=ExtResource( 2 )]
+position = Vector2( 96, 1120 )
+scale = Vector2( 6, 2 )
+
+[node name="map" parent="." index="2"]
+tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, -65528, 0, 0, -65527, 0, 0, -65526, 0, 0, -65525, 0, 0, -65524, 0, 0, -65523, 0, 0, -65522, 0, 0, -65521, 0, 0, -65520, 0, 0, -65519, 0, 0, -65518, 0, 0, -65517, 0, 0, -65516, 0, 0, -65515, 0, 0, -65514, 0, 0, -65513, 0, 0, -65512, 0, 0, -65511, 0, 0, -65510, 0, 0, -65509, 0, 0, -65508, 0, 0, -65507, 0, 0, -65506, 0, 0, -65505, 0, 0, -65504, 0, 0, 65535, 0, 0, 2, 0, 0, 6, 0, 0, 31, 0, 0, 32, 0, 0, 131071, 0, 0, 65538, 0, 0, 65542, 0, 0, 65567, 0, 0, 65568, 0, 0, 196607, 0, 0, 131103, 0, 0, 131104, 0, 0, 262143, 0, 0, 196639, 0, 0, 196640, 0, 0, 327679, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262160, 0, 0, 262161, 0, 0, 262162, 0, 0, 262163, 0, 0, 262164, 0, 0, 262165, 0, 0, 262166, 0, 0, 262167, 0, 0, 262168, 0, 0, 262169, 0, 0, 262170, 0, 0, 262175, 0, 0, 262176, 0, 0, 393215, 0, 0, 327706, 0, 0, 327711, 0, 0, 327712, 0, 0, 458751, 0, 0, 393242, 0, 0, 393247, 0, 0, 393248, 0, 0, 524287, 0, 0, 458778, 0, 0, 458783, 0, 0, 458784, 0, 0, 589823, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 0, 0, 524308, 0, 0, 524309, 0, 0, 524310, 0, 0, 524314, 0, 0, 524319, 0, 0, 524320, 0, 0, 655359, 0, 0, 589827, 0, 0, 589850, 0, 0, 589855, 0, 0, 589856, 0, 0, 720895, 0, 0, 655363, 0, 0, 655386, 0, 0, 655391, 0, 0, 655392, 0, 0, 786431, 0, 0, 720899, 0, 0, 720903, 0, 0, 720904, 0, 0, 720905, 0, 0, 720906, 0, 0, 720907, 0, 0, 720908, 0, 0, 720909, 0, 0, 720910, 0, 0, 720911, 0, 0, 720912, 0, 0, 720913, 0, 0, 720914, 0, 0, 720915, 0, 0, 720916, 0, 0, 720917, 0, 0, 720918, 0, 0, 720919, 0, 0, 720920, 0, 0, 720921, 0, 0, 720922, 0, 0, 720923, 0, 0, 720924, 0, 0, 720926, 0, 0, 720927, 0, 0, 720928, 0, 0, 851967, 0, 0, 786435, 0, 0, 786464, 0, 0, 917503, 0, 0, 851971, 0, 0, 851996, 0, 0, 851998, 0, 0, 851999, 0, 0, 852000, 0, 0, 983039, 0, 0, 917507, 0, 0, 917508, 0, 0, 917509, 0, 0, 917510, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917522, 0, 0, 917523, 0, 0, 917524, 0, 0, 917525, 0, 0, 917526, 0, 0, 917527, 0, 0, 917528, 0, 0, 917529, 0, 0, 917530, 0, 0, 917531, 0, 0, 917532, 0, 0, 917534, 0, 0, 917535, 0, 0, 917536, 0, 0, 1048575, 0, 0, 983071, 0, 0, 983072, 0, 0, 1114111, 0, 0, 1048607, 0, 0, 1048608, 0, 0, 1179647, 0, 0, 1114143, 0, 0, 1114144, 0, 0, 1245183, 0, 0, 1179679, 0, 0, 1179680, 0, 0, 1310719, 0, 0, 1245184, 0, 0, 1245185, 0, 0, 1245186, 0, 0, 1245187, 0, 0, 1245188, 0, 0, 1245189, 0, 0, 1245190, 0, 0, 1245191, 0, 0, 1245192, 0, 0, 1245193, 0, 0, 1245194, 0, 0, 1245195, 0, 0, 1245196, 0, 0, 1245197, 0, 0, 1245198, 0, 0, 1245199, 0, 0, 1245200, 0, 0, 1245201, 0, 0, 1245202, 0, 0, 1245203, 0, 0, 1245204, 0, 0, 1245205, 0, 0, 1245206, 0, 0, 1245207, 0, 0, 1245208, 0, 0, 1245209, 0, 0, 1245210, 0, 0, 1245211, 0, 0, 1245212, 0, 0, 1245213, 0, 0, 1245214, 0, 0, 1245215, 0, 0, 1245216, 0, 0 )
+
+[node name="cursor" parent="." index="3"]
+position = Vector2( 47, 96 )
+
+[node name="no_control_area" parent="." index="5" instance=ExtResource( 2 )]
 position = Vector2( 1888, 832 )
 scale = Vector2( 4, 12 )
 
-[node name="danger" parent="." index="4" instance=ExtResource( 3 )]
+[node name="dangers" type="Node2D" parent="." index="6"]
+editor/display_folded = true
+
+[node name="danger" parent="dangers" index="0" instance=ExtResource( 3 )]
+editor/display_folded = true
 position = Vector2( 288, 224 )
 
-[node name="danger2" parent="." index="5" instance=ExtResource( 3 )]
+[node name="danger2" parent="dangers" index="1" instance=ExtResource( 3 )]
 position = Vector2( 288, 160 )
 
-[node name="danger3" parent="." index="6" instance=ExtResource( 3 )]
+[node name="danger3" parent="dangers" index="2" instance=ExtResource( 3 )]
 position = Vector2( 544, 160 )
 
-[node name="danger4" parent="." index="7" instance=ExtResource( 3 )]
+[node name="danger4" parent="dangers" index="3" instance=ExtResource( 3 )]
 position = Vector2( 544, 96 )
 
-[node name="danger5" parent="." index="8" instance=ExtResource( 3 )]
+[node name="danger5" parent="dangers" index="4" instance=ExtResource( 3 )]
 position = Vector2( 1952, 1184 )
 
-[node name="danger24" parent="." index="9" instance=ExtResource( 3 )]
+[node name="danger24" parent="dangers" index="5" instance=ExtResource( 3 )]
 position = Vector2( 1824, 1184 )
 
-[node name="danger25" parent="." index="10" instance=ExtResource( 3 )]
+[node name="danger30" parent="dangers" index="6" instance=ExtResource( 3 )]
+position = Vector2( 1760, 1120 )
+
+[node name="danger31" parent="dangers" index="7" instance=ExtResource( 3 )]
+position = Vector2( 1696, 1056 )
+
+[node name="danger32" parent="dangers" index="8" instance=ExtResource( 3 )]
+position = Vector2( 1568, 992 )
+
+[node name="danger33" parent="dangers" index="9" instance=ExtResource( 3 )]
+position = Vector2( 1568, 1056 )
+
+[node name="danger34" parent="dangers" index="10" instance=ExtResource( 3 )]
+position = Vector2( 1568, 1120 )
+
+[node name="danger35" parent="dangers" index="11" instance=ExtResource( 3 )]
+position = Vector2( 1696, 1120 )
+
+[node name="danger36" parent="dangers" index="12" instance=ExtResource( 3 )]
+position = Vector2( 1696, 1184 )
+
+[node name="danger37" parent="dangers" index="13" instance=ExtResource( 3 )]
+position = Vector2( 1760, 1184 )
+
+[node name="danger38" parent="dangers" index="14" instance=ExtResource( 3 )]
+position = Vector2( 1440, 1184 )
+
+[node name="danger39" parent="dangers" index="15" instance=ExtResource( 3 )]
+position = Vector2( 1440, 1120 )
+
+[node name="danger40" parent="dangers" index="16" instance=ExtResource( 3 )]
+position = Vector2( 1440, 1056 )
+
+[node name="danger51" parent="dangers" index="17" instance=ExtResource( 3 )]
+position = Vector2( 96, 416 )
+
+[node name="danger52" parent="dangers" index="18" instance=ExtResource( 3 )]
+position = Vector2( 224, 352 )
+
+[node name="danger53" parent="dangers" index="19" instance=ExtResource( 3 )]
+position = Vector2( 160, 480 )
+
+[node name="danger46" parent="dangers" index="20" instance=ExtResource( 3 )]
+position = Vector2( 1184, 992 )
+
+[node name="danger47" parent="dangers" index="21" instance=ExtResource( 3 )]
+position = Vector2( 992, 992 )
+
+[node name="danger56" parent="dangers" index="22" instance=ExtResource( 3 )]
+position = Vector2( 800, 992 )
+
+[node name="danger57" parent="dangers" index="23" instance=ExtResource( 3 )]
+position = Vector2( 736, 992 )
+
+[node name="danger49" parent="dangers" index="24" instance=ExtResource( 3 )]
+position = Vector2( 448, 992 )
+scale = Vector2( 8, 1 )
+
+[node name="danger84" parent="dangers" index="25" instance=ExtResource( 3 )]
+position = Vector2( 1408, 672 )
+scale = Vector2( 8, 1 )
+
+[node name="danger85" parent="dangers" index="26" instance=ExtResource( 3 )]
+position = Vector2( 832, 608 )
+scale = Vector2( 8, 1 )
+
+[node name="danger54" parent="dangers" index="27" instance=ExtResource( 3 )]
+position = Vector2( 32, 768 )
+rotation = -1.5708
+scale = Vector2( 8, 1 )
+
+[node name="danger55" parent="dangers" index="28" instance=ExtResource( 3 )]
+position = Vector2( 160, 768 )
+rotation = -1.5708
+scale = Vector2( 8, 1 )
+
+[node name="danger50" parent="dangers" index="29" instance=ExtResource( 3 )]
+position = Vector2( 448, 1120 )
+scale = Vector2( 8, 1 )
+
+[node name="danger41" parent="dangers" index="30" instance=ExtResource( 3 )]
+position = Vector2( 1280, 1056 )
+rotation = -0.785398
+scale = Vector2( 1, 1 )
+
+[node name="danger42" parent="dangers" index="31" instance=ExtResource( 3 )]
+position = Vector2( 1184, 1152 )
+rotation = -0.785398
+scale = Vector2( 1, 1 )
+
+[node name="danger43" parent="dangers" index="32" instance=ExtResource( 3 )]
+position = Vector2( 1088, 1056 )
+rotation = -0.785398
+scale = Vector2( 1, 1 )
+
+[node name="danger44" parent="dangers" index="33" instance=ExtResource( 3 )]
+position = Vector2( 992, 1152 )
+rotation = -0.785398
+scale = Vector2( 1, 1 )
+
+[node name="danger48" parent="dangers" index="34" instance=ExtResource( 3 )]
+position = Vector2( 800, 1152 )
+rotation = -0.785398
+scale = Vector2( 1, 1 )
+
+[node name="danger45" parent="dangers" index="35" instance=ExtResource( 3 )]
+position = Vector2( 896, 1056 )
+rotation = -0.785398
+scale = Vector2( 1, 1 )
+
+[node name="danger25" parent="dangers" index="36" instance=ExtResource( 3 )]
 position = Vector2( 1952, 1120 )
 
-[node name="danger26" parent="." index="11" instance=ExtResource( 3 )]
+[node name="danger26" parent="dangers" index="37" instance=ExtResource( 3 )]
 position = Vector2( 1952, 1056 )
 
-[node name="danger27" parent="." index="12" instance=ExtResource( 3 )]
+[node name="danger27" parent="dangers" index="38" instance=ExtResource( 3 )]
 position = Vector2( 1952, 992 )
 
-[node name="danger28" parent="." index="13" instance=ExtResource( 3 )]
+[node name="danger28" parent="dangers" index="39" instance=ExtResource( 3 )]
 position = Vector2( 1824, 1120 )
 
-[node name="danger29" parent="." index="14" instance=ExtResource( 3 )]
+[node name="danger29" parent="dangers" index="40" instance=ExtResource( 3 )]
 position = Vector2( 1824, 992 )
 
-[node name="danger9" parent="." index="15" instance=ExtResource( 3 )]
-position = Vector2( 672, 32 )
+[node name="danger9" parent="dangers" index="41" instance=ExtResource( 3 )]
+position = Vector2( 352, 352 )
 
-[node name="danger10" parent="." index="16" instance=ExtResource( 3 )]
-position = Vector2( 672, 160 )
+[node name="danger64" parent="dangers" index="42" instance=ExtResource( 3 )]
+position = Vector2( 608, 352 )
 
-[node name="danger11" parent="." index="17" instance=ExtResource( 3 )]
-position = Vector2( 800, 96 )
+[node name="danger67" parent="dangers" index="43" instance=ExtResource( 3 )]
+position = Vector2( 864, 352 )
 
-[node name="danger12" parent="." index="18" instance=ExtResource( 3 )]
-position = Vector2( 800, 224 )
+[node name="danger70" parent="dangers" index="44" instance=ExtResource( 3 )]
+position = Vector2( 1120, 352 )
 
-[node name="danger13" parent="." index="19" instance=ExtResource( 3 )]
+[node name="danger72" parent="dangers" index="45" instance=ExtResource( 3 )]
+position = Vector2( 1376, 352 )
+
+[node name="danger68" parent="dangers" index="46" instance=ExtResource( 3 )]
+position = Vector2( 736, 416 )
+
+[node name="danger74" parent="dangers" index="47" instance=ExtResource( 3 )]
+position = Vector2( 992, 416 )
+
+[node name="danger77" parent="dangers" index="48" instance=ExtResource( 3 )]
+position = Vector2( 992, 480 )
+
+[node name="danger78" parent="dangers" index="49" instance=ExtResource( 3 )]
+position = Vector2( 1440, 480 )
+
+[node name="danger79" parent="dangers" index="50" instance=ExtResource( 3 )]
+position = Vector2( 1440, 352 )
+
+[node name="danger75" parent="dangers" index="51" instance=ExtResource( 3 )]
+position = Vector2( 1248, 416 )
+
+[node name="danger76" parent="dangers" index="52" instance=ExtResource( 3 )]
+position = Vector2( 1248, 352 )
+
+[node name="danger69" parent="dangers" index="53" instance=ExtResource( 3 )]
+position = Vector2( 480, 416 )
+
+[node name="danger10" parent="dangers" index="54" instance=ExtResource( 3 )]
+position = Vector2( 352, 480 )
+
+[node name="danger65" parent="dangers" index="55" instance=ExtResource( 3 )]
+position = Vector2( 608, 480 )
+
+[node name="danger80" parent="dangers" index="56" instance=ExtResource( 3 )]
+position = Vector2( 480, 672 )
+
+[node name="danger66" parent="dangers" index="57" instance=ExtResource( 3 )]
+position = Vector2( 864, 480 )
+
+[node name="danger71" parent="dangers" index="58" instance=ExtResource( 3 )]
+position = Vector2( 1120, 480 )
+
+[node name="danger73" parent="dangers" index="59" instance=ExtResource( 3 )]
+position = Vector2( 1376, 480 )
+
+[node name="danger11" parent="dangers" index="60" instance=ExtResource( 3 )]
+position = Vector2( 800, 160 )
+
+[node name="danger12" parent="dangers" index="61" instance=ExtResource( 3 )]
+position = Vector2( 864, 224 )
+
+[node name="danger13" parent="dangers" index="62" instance=ExtResource( 3 )]
 position = Vector2( 928, 160 )
 
-[node name="danger14" parent="." index="20" instance=ExtResource( 3 )]
+[node name="danger14" parent="dangers" index="63" instance=ExtResource( 3 )]
+position = Vector2( 736, 224 )
+
+[node name="danger15" parent="dangers" index="64" instance=ExtResource( 3 )]
+position = Vector2( 672, 160 )
+
+[node name="danger58" parent="dangers" index="65" instance=ExtResource( 3 )]
+position = Vector2( 672, 32 )
+
+[node name="danger59" parent="dangers" index="66" instance=ExtResource( 3 )]
+position = Vector2( 800, 32 )
+
+[node name="danger60" parent="dangers" index="67" instance=ExtResource( 3 )]
 position = Vector2( 928, 32 )
 
-[node name="danger15" parent="." index="21" instance=ExtResource( 3 )]
-position = Vector2( 992, 32 )
+[node name="danger61" parent="dangers" index="68" instance=ExtResource( 3 )]
+position = Vector2( 1120, 224 )
 
-[node name="danger16" parent="." index="22" instance=ExtResource( 3 )]
+[node name="danger62" parent="dangers" index="69" instance=ExtResource( 3 )]
+position = Vector2( 1056, 32 )
+
+[node name="danger63" parent="dangers" index="70" instance=ExtResource( 3 )]
+position = Vector2( 1184, 32 )
+
+[node name="danger16" parent="dangers" index="71" instance=ExtResource( 3 )]
 position = Vector2( 1184, 160 )
 
-[node name="danger20" parent="." index="23" instance=ExtResource( 3 )]
+[node name="danger20" parent="dangers" index="72" instance=ExtResource( 3 )]
 position = Vector2( 1824, 672 )
 
-[node name="danger21" parent="." index="24" instance=ExtResource( 3 )]
+[node name="danger21" parent="dangers" index="73" instance=ExtResource( 3 )]
 position = Vector2( 1952, 672 )
 
-[node name="danger23" parent="." index="25" instance=ExtResource( 3 )]
+[node name="danger23" parent="dangers" index="74" instance=ExtResource( 3 )]
 position = Vector2( 1952, 224 )
 
-[node name="danger17" parent="." index="26" instance=ExtResource( 3 )]
+[node name="danger17" parent="dangers" index="75" instance=ExtResource( 3 )]
 position = Vector2( 992, 224 )
 
-[node name="danger18" parent="." index="27" instance=ExtResource( 3 )]
+[node name="danger18" parent="dangers" index="76" instance=ExtResource( 3 )]
 position = Vector2( 1056, 160 )
 
-[node name="danger19" parent="." index="28" instance=ExtResource( 3 )]
-position = Vector2( 1120, 32 )
+[node name="danger19" parent="dangers" index="77" instance=ExtResource( 3 )]
+position = Vector2( 608, 224 )
 
-[node name="danger8" parent="." index="29" instance=ExtResource( 3 )]
+[node name="danger8" parent="dangers" index="78" instance=ExtResource( 3 )]
 position = Vector2( 544, 224 )
 
-[node name="danger6" parent="." index="30" instance=ExtResource( 3 )]
+[node name="danger6" parent="dangers" index="79" instance=ExtResource( 3 )]
 position = Vector2( 1600, 96 )
 scale = Vector2( 10, 1 )
 
-[node name="danger7" parent="." index="31" instance=ExtResource( 3 )]
+[node name="danger7" parent="dangers" index="80" instance=ExtResource( 3 )]
 position = Vector2( 1536, 224 )
 scale = Vector2( 10, 1 )
 
-[node name="danger22" parent="." index="32" instance=ExtResource( 3 )]
+[node name="danger22" parent="dangers" index="81" instance=ExtResource( 3 )]
 position = Vector2( 1760, 480 )
 rotation = 1.5708
 scale = Vector2( 7, 1 )
-

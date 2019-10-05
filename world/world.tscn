@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://world/world.gd" type="Script" id=1]
 [ext_resource path="res://cursor/cursor.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://switch.tscn" type="PackedScene" id=6]
 [ext_resource path="res://key.tscn" type="PackedScene" id=7]
 [ext_resource path="res://turret.tscn" type="PackedScene" id=8]
+[ext_resource path="res://attractor.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 241 )
@@ -66,4 +67,7 @@ position = Vector2( 960, 273 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="win"]
 position = Vector2( 64, -49 )
 shape = SubResource( 1 )
+
+[node name="attractor" parent="." instance=ExtResource( 9 )]
+position = Vector2( 768, 288 )
 

@@ -17,9 +17,8 @@ enum MOUSE_MODE {
 export(PackedScene) var next
 
 var can_control = true
-var mouse_mode = MOUSE_MODE.NORMAL
+var mouse_mode = MOUSE_MODE.SPACE
 var prev_mode = mouse_mode
-
 var held_object = null
 
 func _ready():
@@ -28,26 +27,19 @@ func _ready():
 	position = Vector2(100,100)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
-	
+
 	
 func _process(delta):
-	vel = get_velocity(mouse_mode, delta)
-	move_and_slide(vel)
-	if $ray.get_collider() and vel.y > 0:
-		vel.y = 0
-		vel.x *= 0.9
-	if $ray2.get_collider() and abs(vel.x) > 0:
-		vel.x = 0
-	if is_on_wall():
-		#vel.x = 0
-		pass
-	mouse_delta = Vector2()
-	
 	if Input.is_action_just_pressed("restart"):
 		get_tree().reload_current_scene()
-	if Input.is_action_just_pressed("left_click"):
-		print("Ima a printer")
-		for a in $area.get_overlapping_areas():
+
+	for a in $area.get_overlapping_areas():
+		if a.is_in_group("attractor"):
+			var f = a.get_force(global_position) * 100
+			acc += f * delta
+		
+		if Input.is_action_just_pressed("left_click"):
+
 			if a.is_in_group("switch"):
 				a.activate()
 			if a.owner.is_in_group("draggable"):
@@ -59,6 +51,17 @@ func _process(delta):
 		if held_object:
 			held_object.drop()
 			held_object = null
+	
+	vel = get_velocity(mouse_mode, delta)
+	move_and_slide(vel)
+	if $ray.get_collider() and vel.y > 0:
+		vel.y = 0
+		vel.x *= 0.9
+	if $ray2.get_collider() and abs(vel.x) > 0:
+		vel.x = 0
+		
+	mouse_delta = Vector2()
+	acc = Vector2()
 	
 	
 func get_velocity(mouse_mode, delta):
@@ -77,15 +80,15 @@ func get_velocity(mouse_mode, delta):
 			return gravity_move(delta)
 
 func gravity_move(delta):
-	acc = Vector2(0, 100)
+	acc += Vector2(0, 100)
 	vel += acc * 10
 	vel += normal_move(50)
 	return vel
 
 
 func outer_space(delta, friction=1):
-	acc = mouse_delta * delta
-	vel += acc * delta * 10
+	acc += mouse_delta * delta
+	vel += acc * 10
 	vel *= friction
 	return vel
 
@@ -95,7 +98,7 @@ func normal_move(delta):
 func physics_move(delta):
 	if can_control and mouse_delta != Vector2():
 		mouse_mode = prev_mode
-	acc = Vector2(0, 1000) * delta
+	acc += Vector2(0, 1000) * delta
 	vel += acc * 10
 	return vel
 

@@ -28,7 +28,9 @@ func _ready():
 	position = Vector2(100,100)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
-	
+
+func add_force(f):
+	acc += f
 	
 func _process(delta):
 	vel = get_velocity(mouse_mode, delta)
@@ -53,6 +55,11 @@ func _process(delta):
 				if !held_object:
 					held_object = a.owner
 					held_object.pickup(self)
+			
+			if a.is_in_group("attractor"):
+				var f = a.get_force()
+				
+				
 				
 	if Input.is_action_just_released("left_click"):
 		if held_object:

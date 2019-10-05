@@ -20,3 +20,4 @@ anchor_mode = 0
 current = true
 zoom = Vector2( 2, 2 )
 
+[node name="bullets" type="Node2D" parent="."]

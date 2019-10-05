@@ -9,7 +9,9 @@ radius = 15.1373
 [sub_resource type="CircleShape2D" id=2]
 radius = 12.6868
 
-[node name="cursor" type="KinematicBody2D"]
+[node name="cursor" type="KinematicBody2D" groups=[
+"cursor",
+]]
 collision_mask = 2
 script = ExtResource( 1 )
 
@@ -23,6 +25,16 @@ shape = SubResource( 2 )
 
 [node name="cursor_hand" type="Sprite" parent="."]
 texture = ExtResource( 2 )
+
+[node name="ray" type="RayCast2D" parent="."]
+position = Vector2( 0, -20 )
+enabled = true
+cast_to = Vector2( 0, 40 )
+
+[node name="ray2" type="RayCast2D" parent="."]
+position = Vector2( -20, 0 )
+enabled = true
+cast_to = Vector2( 40, 0 )
 
 [connection signal="area_entered" from="area" to="." method="_on_area_area_entered"]
 [connection signal="area_exited" from="area" to="." method="_on_area_area_exited"]

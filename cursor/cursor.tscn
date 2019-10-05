@@ -4,7 +4,7 @@
 [ext_resource path="res://cursor/cursor_hand.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 15.1373
+radius = 9.48439
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 12.6868
@@ -24,6 +24,7 @@ shape = SubResource( 1 )
 shape = SubResource( 2 )
 
 [node name="cursor_hand" type="Sprite" parent="."]
+position = Vector2( 11.1165, 10.8392 )
 texture = ExtResource( 2 )
 
 [node name="ray" type="RayCast2D" parent="."]
@@ -35,6 +36,5 @@ cast_to = Vector2( 0, 40 )
 position = Vector2( -20, 0 )
 enabled = true
 cast_to = Vector2( 40, 0 )
-
 [connection signal="area_entered" from="area" to="." method="_on_area_area_entered"]
 [connection signal="area_exited" from="area" to="." method="_on_area_area_exited"]

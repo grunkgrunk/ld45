@@ -17,9 +17,8 @@ enum MOUSE_MODE {
 export(PackedScene) var next
 
 var can_control = true
-var mouse_mode = MOUSE_MODE.NORMAL
+var mouse_mode = MOUSE_MODE.SPACE
 var prev_mode = mouse_mode
-
 var held_object = null
 
 func _ready():
@@ -29,10 +28,28 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
-func add_force(f):
-	acc += f
 	
 func _process(delta):
+	if Input.is_action_just_pressed("restart"):
+		get_tree().reload_current_scene()
+	for a in $area.get_overlapping_areas():
+		if a.is_in_group("attractor"):
+			var f = a.get_force(global_position) * 100
+			acc += f * delta
+		
+		if Input.is_action_just_pressed("left_click"):
+			if a.is_in_group("switch"):
+				a.activate()
+			if a.owner.is_in_group("draggable"):
+				if !held_object:
+					held_object = a.owner
+					held_object.pickup(self)
+				
+	if Input.is_action_just_released("left_click"):
+		if held_object:
+			held_object.drop(vel * 1000)
+			held_object = null
+	
 	vel = get_velocity(mouse_mode, delta)
 	move_and_slide(vel)
 	if $ray.get_collider() and vel.y > 0:
@@ -40,31 +57,9 @@ func _process(delta):
 		vel.x *= 0.9
 	if $ray2.get_collider() and abs(vel.x) > 0:
 		vel.x = 0
-	if is_on_wall():
-		#vel.x = 0
-		pass
+		
 	mouse_delta = Vector2()
-	
-	if Input.is_action_just_pressed("restart"):
-		get_tree().reload_current_scene()
-	if Input.is_action_just_pressed("left_click"):
-		for a in $area.get_overlapping_areas():
-			if a.is_in_group("switch"):
-				a.activate()
-			if a.owner.is_in_group("draggable"):
-				if !held_object:
-					held_object = a.owner
-					held_object.pickup(self)
-			
-			if a.is_in_group("attractor"):
-				var f = a.get_force()
-				
-				
-				
-	if Input.is_action_just_released("left_click"):
-		if held_object:
-			held_object.drop(vel * 1000)
-			held_object = null
+	acc = Vector2()
 	
 	
 func get_velocity(mouse_mode, delta):
@@ -83,15 +78,15 @@ func get_velocity(mouse_mode, delta):
 			return gravity_move(delta)
 
 func gravity_move(delta):
-	acc = Vector2(0, 100)
+	acc += Vector2(0, 100)
 	vel += acc * 10
 	vel += normal_move(50)
 	return vel
 
 
 func outer_space(delta, friction=1):
-	acc = mouse_delta * delta
-	vel += acc * delta * 10
+	acc += mouse_delta * delta
+	vel += acc * 10
 	vel *= friction
 	return vel
 
@@ -101,7 +96,7 @@ func normal_move(delta):
 func physics_move(delta):
 	if can_control and mouse_delta != Vector2():
 		mouse_mode = prev_mode
-	acc = Vector2(0, 1000) * delta
+	acc += Vector2(0, 1000) * delta
 	vel += acc * 10
 	return vel
 

@@ -3,6 +3,7 @@
 [ext_resource path="res://attractor.gd" type="Script" id=1]
 
 [sub_resource type="CircleShape2D" id=1]
+radius = 1145.5
 
 [node name="attractor" type="Area2D" groups=[
 "attractor",

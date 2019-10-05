@@ -4,7 +4,7 @@
 [ext_resource path="res://no_control_area.tscn" type="PackedScene" id=2]
 [ext_resource path="res://danger.tscn" type="PackedScene" id=3]
 
-[node name="base_world" index="0" instance=ExtResource( 1 )]
+[node name="base_world" instance=ExtResource( 1 )]
 
 [node name="no_control_area3" parent="." index="0" instance=ExtResource( 2 )]
 position = Vector2( 1568, 512 )

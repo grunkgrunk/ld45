@@ -3,9 +3,9 @@
 [ext_resource path="res://turret.gd" type="Script" id=1]
 [ext_resource path="res://enemyWalking_2.png" type="Texture" id=2]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=1]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id=2]
 radius = 832.0
 
 [node name="turret" type="KinematicBody2D" groups=[
@@ -18,7 +18,7 @@ script = ExtResource( 1 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="shoot_freq" type="Timer" parent="."]
 wait_time = 2.0
@@ -27,10 +27,9 @@ autostart = true
 [node name="range" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="range"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="bullets" type="Node2D" parent="."]
-
 [connection signal="timeout" from="shoot_freq" to="." method="_on_shoot_freq_timeout"]
 [connection signal="body_entered" from="range" to="." method="_on_range_body_entered"]
 [connection signal="body_exited" from="range" to="." method="_on_range_body_exited"]

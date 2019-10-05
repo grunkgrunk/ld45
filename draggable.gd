@@ -7,12 +7,14 @@ func _ready():
 	pass # Replace with function body.
 	
 func pickup(_cursor):
+	#print("pickup line")
 	if cursor:
 		return
 	mode = RigidBody2D.MODE_STATIC
 	cursor = _cursor
 	
 func drop(impulse=Vector2.ZERO):
+	impulse = impulse/impulse.length()*100
 	if cursor:
 		mode = RigidBody2D.MODE_RIGID
 		apply_central_impulse(impulse)

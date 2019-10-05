@@ -46,6 +46,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("restart"):
 		get_tree().reload_current_scene()
 	if Input.is_action_just_pressed("left_click"):
+		print("Ima a printer")
 		for a in $area.get_overlapping_areas():
 			if a.is_in_group("switch"):
 				a.activate()
@@ -56,7 +57,7 @@ func _process(delta):
 				
 	if Input.is_action_just_released("left_click"):
 		if held_object:
-			held_object.drop(vel * 1000)
+			held_object.drop()
 			held_object = null
 	
 	
